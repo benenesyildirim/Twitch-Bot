@@ -13,6 +13,6 @@ ___
     `python3 index.py -r 'oauth:kerkjhrmmrir4mrjrmrvjtYrkkuemgrgkjrh' 'niceBotName' '#niceChannelName` 
  * Add Command  
     * You must run program with `-c` arguments and 2 parameter (command, command response) for add new command.
-        * Example: `python3 -c '!newCommand' 'newCommandResponse'`
+        * Example: `python3 -c 'newCommand' 'newCommandResponse'`
     * You must restart Twitch Bot after add new command.
   

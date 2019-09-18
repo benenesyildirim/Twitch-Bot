@@ -27,11 +27,12 @@ class TwitchBot:
             sys.exit()
 
     @staticmethod
-    def check_command(command):
-        command = command.split()
+    def check_command(command_array):
+        split_command = command_array.split()
         connect_db = sqlite3.connect('bot.db')
         cursor = connect_db.cursor()
-        cursor.execute("SELECT * FROM tb_command WHERE command= ?", command)
+        cleared_command = split_command[0]
+        cursor.execute("SELECT * FROM tb_command WHERE command= ?", (cleared_command,))
         data = cursor.fetchall()
         connect_db.close()
 
